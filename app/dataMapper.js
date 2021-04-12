@@ -1,20 +1,5 @@
 const client = require('./database');
 
-/*
-const dataMapper = {
-    getAllFigurines: (callback)=> {
-
-    },
-
-    getOneFigurine: (id, callback)=> {
-
-    },
-
-};
-
-module.exports = dataMapper;
-*/
-
 exports.getAllFigurines = (callback) => {
     
     client.query(`SELECT * FROM "figurine" ORDER BY "name" ASC`, (error, result) => {
